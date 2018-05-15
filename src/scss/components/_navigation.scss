@@ -122,8 +122,8 @@
         &,
         &::before,
         &::after {
-            width: 3rem;
-            height: 2px;
+            width: rem(50);
+            height: rem(2);
             background-color: #000;
             display: inline-block;
         }
@@ -136,16 +136,16 @@
             transition: all .2s;
         }
 
-        &::before { top: -.8rem; }
-        &::after { top: .8rem; }
+        &::before { top: rem(-12); }
+        &::after { top: rem(12); }
     }
 
     &__button:hover &__icon::before {
-        top: -1rem;
+        top: rem(-14);
     }
 
     &__button:hover &__icon::after {
-        top: 1rem;
+        top: rem(14);
     }
 
     &__checkbox:checked + &__button &__icon {
