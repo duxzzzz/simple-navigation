@@ -1,0 +1,25 @@
+/**
+ * Converts pixel value to rem accoding to browser's context (base font size).
+ */
+ @function rem($pixels, $context: $browser-context) {
+    @if(unitless($pixels)) {
+      $pixels: $pixels + 0px;
+    }
+  
+    @if(unitless($context)) {
+      $context: $context + 0px;
+    }
+  
+    @return ($pixels / $context) + 0rem;
+  }
+  
+  /*
+   * Retrieves z-index value from z-index map.
+   */
+  @function z-index($key) {
+    @return map-get($z-indexes, $key);
+  }
+  
+  @function breakpoint($breakpoint) {
+    @return map-get($breakpoints, $breakpoint);
+  }

@@ -1,0 +1,17 @@
+%full-width {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  %flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  %link-reset {
+    color: inherit;
+    cursor: pointer;
+    display: inline-block;
+    text-decoration: none;
+  }

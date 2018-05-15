@@ -1,0 +1,44 @@
+// Context
+$browser-context: 16px;
+
+// Font stack
+$font-stack: #{'Nanum Gothic', sans-serif};
+
+// Colors
+$color-teal: #00a79d;
+$color-teal-dark: #009188;
+$color-gradient-blue: #1b67c2;
+
+// Gradients
+$gradient-background: linear-gradient(to right, $color-teal, $color-gradient-blue);
+$gradient-background-x: linear-gradient(to left, $color-teal, $color-gradient-blue);
+
+// Grid
+$grid-columns: 12;
+$grid-column-size: 90px;
+$grid-column-gutter: 30px;
+$grid-padding: 20px;
+
+$grid-max-width: ($grid-columns * $grid-column-size) + (($grid-columns - 1) * $grid-column-gutter);
+$grid-container-max-width: $grid-max-width + (2 * $grid-padding);
+$grid-gutter: percentage($grid-column-gutter / $grid-max-width);
+
+
+// Responsive
+
+@mixin media($point) {
+  
+    $small: "(max-width: 768px)";
+    $medium: "(max-width: 992px)";
+    $large: "(max-width: 1200px)";
+  
+    @if $point == small {
+      @media #{$small} { @content; }
+    }
+    @else if $point == medium {
+      @media #{$medium} { @content; }
+    }
+    @else if $point == large {
+      @media #{$large}  { @content; }
+    }
+  }

@@ -1,0 +1,18 @@
+/*
+ * Grid mixin for element width.
+ */
+
+  @mixin span($cols) {
+      flex-basis:  (100 / ($grid-columns / $cols)) * 1%;
+      &:not(:last-child) {
+          margin-right: $grid-column-gutter;
+      }
+      @include media (small) {
+        flex-basis:  auto;
+        &:not(:last-child) {
+            margin-right: 0;
+        }
+      }
+  }
+
+    
