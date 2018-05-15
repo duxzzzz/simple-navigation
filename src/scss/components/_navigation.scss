@@ -1,0 +1,61 @@
+.navigation {
+    margin: 0 auto;
+    max-width: 100%;
+    width: 100%;
+    font-family: $font-stack;
+
+    &__menu {
+        padding: 0;
+        margin: 0;
+        max-width: 100%;
+        height: rem(70);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        list-style-type: none; 
+
+        &--list {
+            &:not(:last-child) {
+                margin-right: rem(50);
+            }
+        }
+
+        &--item {
+            text-decoration: none;
+            align-self: center;
+            font-size: rem(20);
+            padding: rem(16) rem(20);
+            transition: background .2s linear;
+
+            @include media(small) {
+                font-size: rem(15);
+            }
+        }
+    }
+}
+
+#checkbox,
+.toggle {
+    display: none;
+}
+
+.toggle {
+    @include media(small) {
+        clear: both;
+        display: block;
+        text-align: right;
+        font-size: rem(35);
+        line-height: rem(40);
+        padding-right: rem(20);
+        cursor: pointer;
+        width: 100%;
+        height: rem(40);
+        color: #595959;
+        background: #dbdbdb;
+        transition: all .2s linear;
+
+        &:hover {
+            background: #cecece;
+        }
+    }
+}
